@@ -23,3 +23,4 @@ MODEL = 'YOUR_MODEL_NAME'
 ```
 
 ## benchmark
+![](https://github.com/kg4sci/CataTQA/blob/main/images/benchmark.png)
