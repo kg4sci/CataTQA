@@ -23,6 +23,20 @@ Open **utils/config.py** through a text editor.Modify the following code.
 API_KEY = 'YOUR_API_KEY'
 MODEL = 'YOUR_MODEL_NAME'
 ```
+### an example
+**Just provide a question and run the tool/run. py program to automatically retrieve answers from all tables.**
+```python
+python tool/run.py
+```
+question: What is the hydrogen production rate (RH2) for a photocatalyst prepared using the Polymerized complex Sol-gel method method?
+answer:
+```python
+table_rank：['table1', 'table3', 'table4', 'table2', 'table5']
+select_table：['RH2(µmol h-1 g-1)', 'Preparation method']
+get_condition:{'RH2(µmol h-1 g-1)': '', 'Preparation method': 'Polymerized complex Sol-gel method'}
+get_tool: {'tool': 'search_value', 'column name': 'RH2'}
+get_answer: 64
+```
 
 ## evaluation
 ![](https://github.com/kg4sci/CataTQA/blob/main/images/evaluation.png)
