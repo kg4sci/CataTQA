@@ -25,7 +25,7 @@ MODEL = 'YOUR_MODEL_NAME'
 ```
 ### an example
 **Just provide a question and run the tool/run. py program to automatically retrieve answers from all tables.**
-```python
+```
 python tool/run.py
 ```
 question: What is the hydrogen production rate (RH2) for a photocatalyst prepared using the Polymerized complex Sol-gel method method?
@@ -48,7 +48,7 @@ get_answer: 64
 ```
 
 - Prompts for Template Questions Generation
-```Annotate the table data, summarize the main problems that this table can solve and its contributions based on the content of the table data.\\
+```Annotate the table data, summarize the main problems that this table can solve and its contributions based on the content of the table data.
     Please generate questions according to the following rules:
     1. Requirements to be met:
     - template questions type: {question_description} 
@@ -70,8 +70,21 @@ get_answer: 64
     - table description:{tabular_description}
     - [column names] - [description]:{field_description}
 ```
-
-
+- Prompts for Table Order
+```Please analyze the relevance of the table according to the problem.
+    question:{question}
+    Available tables and table descriptions:
+    {table_desc}
+    Please sort the tables by relevance from high to low, give the first five possible tables, and directly return the table name list.
+    For example: ["table1", "table2"]
+```
+- Prompts for Column Selection
+```Only provide the column names required to answer the question:
+        question: {question}
+        {table} information: [column]-[column name explanation]
+        {table_field\}
+        directly return to the column name list, for example: ['col1','col2']
+```
 
 
 
