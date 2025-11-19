@@ -131,5 +131,6 @@ get_answer: 64
 ```
 
 ## Evaluation
+We experimented with four proprietary LLMs on CataTQA, GPT-4o (gpt-4o-2024-11-20), DeepSeek V3 (deepseek-v3-250324), Claude-3 (claude-3-haiku-20240307) and Gemini-2.5 (gemini-2.5-flash-preview-04-17). For all experiments, we used the same hyperparameters and perform 0-shot prompting via the APIs.
 ![](https://github.com/kg4sci/CataTQA/blob/main/images/evaluation.png)
 ![](https://github.com/kg4sci/CataTQA/blob/main/images/benchmark.png)
