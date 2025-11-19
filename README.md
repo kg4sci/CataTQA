@@ -129,6 +129,26 @@ get_answer: 64
     Code must be used in markdown format("python").
     Do not return redundant content.The returned results must be saved in the "answer" variable.
 ```
+## Verify the origin of the answer
+To verify whether LLMs can answer relevant questions based on their own memorization, we conducted supplementary experiments. We directly input the questions into the large model and asked it to provide answers, then evaluated the accuracy of its responses. 
+
+- Prompt
+```Please provide the answer directly to the question without giving any explanation.
+    question:{question}
+    The output format is: {"answer": ""}
+```
+- Result
+
+| Question Type       | Level   | ACC   | AVG ACC |
+|---------------------|---------|-------|---------|
+| Cell Query          | simple  | 0.004 | 0.002   |
+|                     | complex | 0     |         |
+| Fact Judgment       | simple  | 0.253 | 0.236   |
+|                     | complex | 0.217 |         |
+| Data Filtering      | simple  | 0     | 0       |
+|                     | complex | 0     |         |
+| Numerical Calculation | simple  | 0.034 | 0.056   |
+|                     | complex | 0.094 |         |
 
 ## Evaluation
 We experimented with four proprietary LLMs on CataTQA, GPT-4o (gpt-4o-2024-11-20), DeepSeek V3 (deepseek-v3-250324), Claude-3 (claude-3-haiku-20240307) and Gemini-2.5 (gemini-2.5-flash-preview-04-17). For all experiments, we used the same hyperparameters and perform 0-shot prompting via the APIs.
