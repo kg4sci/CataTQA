@@ -82,7 +82,7 @@ get_answer: 64
 ```Only provide the column names required to answer the question:
     question: {question}
     {table} information: [column]-[column name explanation]
-    {table_field\}
+    {table_field}
     directly return to the column name list, for example: ['col1','col2']
 ```
 
@@ -112,14 +112,13 @@ get_answer: 64
 ```Generate python code based on the question and given conditions, index CSV file data, and answer the question.
     Generate a function named "get_answer"(No parameters required). The function must use the "return" keyword to return the variable "answer", which is the answer to the question.
     question: {question['question']}
-    refer_dataset: {question['refer\_dataset']}
+    refer_dataset: {question['refer_dataset']}
     column names: {question['column names']}
     condition: {question['condition']}
     Code must be used in markdown format("python").
     Do not return redundant content.The returned results must be saved in the "answer" variable.
 ```
 
-  
 ## evaluation
 ![](https://github.com/kg4sci/CataTQA/blob/main/images/evaluation.png)
 ![](https://github.com/kg4sci/CataTQA/blob/main/images/benchmark.png)
