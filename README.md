@@ -35,7 +35,7 @@ Open **utils/config.py** through a text editor.Modify the following code.
 API_KEY = 'YOUR_API_KEY'
 MODEL = 'YOUR_MODEL_NAME'
 ```
-### An example
+## An example of a running result
 **Just provide a question and run the tool/run. py program to automatically retrieve answers from all tables.**
 ```
 python tool/run.py
@@ -50,7 +50,6 @@ get_tool: {'tool': 'search_value', 'column name': 'RH2'}
 get_answer: 64
 ```
 ## Prompt
-
 - Prompts for Table Annotation
 ```Annotate the table data, summarize the main problems that this table can solve and its contributions based on the content of the table data.
     Table data:{dataset}
