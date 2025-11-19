@@ -80,15 +80,44 @@ get_answer: 64
 ```
 - Prompts for Column Selection
 ```Only provide the column names required to answer the question:
-        question: {question}
-        {table} information: [column]-[column name explanation]
-        {table_field\}
-        directly return to the column name list, for example: ['col1','col2']
+    question: {question}
+    {table} information: [column]-[column name explanation]
+    {table_field\}
+    directly return to the column name list, for example: ['col1','col2']
 ```
 
+- Prompts for Condition Extraction
+```Please extract the query criteria from the question and return the results according to the table structure:
+    question: {question}
+    table information:
+    column name: [{tar}]
+    Output requirements:
+    1. Return to dictionary format, with the key being the column name and the value being the query condition
+    2. The values corresponding to all column names must be output. The output not found in the problem is ''.
+    3. Extract and preserve comparison symbols (>,<,=, etc.)
+    4. example:{{"column1":">50", "column2":"Liming"}}
+    Please return the JSON dictionary directly without including any other content
+```
 
+- Prompts for Tool Invocation
+```Please use the tools needed to answer the questions according to the question analysis. 
+    You need to specify the calculated column name when you need to perform calculation, but you do not need to specify it when you are performing table lookup.
+    Question: {question}
+    Description of available tools:
+    {tool_desc}
+    Please return the tool and column name to be used directly. For example: {{"tool":"","colnum name":""}}
+```
 
-
+- Tool Invocation
+```Generate python code based on the question and given conditions, index CSV file data, and answer the question.
+    Generate a function named "get_answer"(No parameters required). The function must use the "return" keyword to return the variable "answer", which is the answer to the question.
+    question: {question['question']}
+    refer_dataset: {question['refer\_dataset']}
+    column names: {question['column names']}
+    condition: {question['condition']}
+    Code must be used in markdown format("python").
+    Do not return redundant content.The returned results must be saved in the "answer" variable.
+```
 
   
 ## evaluation
