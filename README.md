@@ -37,7 +37,16 @@ get_condition:{'RH2(µmol h-1 g-1)': '', 'Preparation method': 'Polymerized comp
 get_tool: {'tool': 'search_value', 'column name': 'RH2'}
 get_answer: 64
 ```
+## Prompt
 
+- Prompts for Table Annotation
+  ```Annotate the table data, summarize the main problems that this table can solve and its contributions based on the content of the table data.
+        Table data:{dataset}
+        Output requirements:
+        1. Summarize the role of data and avoid discussing a single column or row of data\\
+        2. Output is limited to 50 words or less
+  ```
+  
 ## evaluation
 ![](https://github.com/kg4sci/CataTQA/blob/main/images/evaluation.png)
 ![](https://github.com/kg4sci/CataTQA/blob/main/images/benchmark.png)
