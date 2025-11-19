@@ -40,12 +40,43 @@ get_answer: 64
 ## Prompt
 
 - Prompts for Table Annotation
-  ```Annotate the table data, summarize the main problems that this table can solve and its contributions based on the content of the table data.
-        Table data:{dataset}
-        Output requirements:
-        1. Summarize the role of data and avoid discussing a single column or row of data\\
-        2. Output is limited to 50 words or less
-  ```
+```Annotate the table data, summarize the main problems that this table can solve and its contributions based on the content of the table data.
+    Table data:{dataset}
+    Output requirements:
+    1. Summarize the role of data and avoid discussing a single column or row of data
+    2. Output is limited to 50 words or less
+```
+
+- Prompts for Template Questions Generation
+```Annotate the table data, summarize the main problems that this table can solve and its contributions based on the content of the table data.\\
+    Please generate questions according to the following rules:
+    1. Requirements to be met:
+    - template questions type: {question_description} 
+    - number of columns required to obtain answers: at least two columns
+    - level: The level of the template questions is differentiated according to the number of columns used.
+    Including two levels of simple and complex.
+    2. Example:
+    Input:
+    - table description:{example_tabular_description}
+    - [column names] - [description]:{example_field_description}
+    Output:{example}
+    3. output format:
+    - Mark the level of each question.At least ten questions per level.
+    - Mark the column names that need to be used to answer this question template.
+    - Use"{}" for template variables.The template variable must be one of the columns of the table.
+    - Use of multiple sentence structures.Questions need to be phrased in a way that is easy to understand.
+    Use the information in the table below to generate template questions according to the above rules:
+    Input:
+    - table description:{tabular_description}
+    - [column names] - [description]:{field_description}
+```
+
+
+
+
+
+
+
   
 ## evaluation
 ![](https://github.com/kg4sci/CataTQA/blob/main/images/evaluation.png)
