@@ -15,6 +15,18 @@ To run our project, you need to first clone the project and use the following co
 You can download our metadata and QA dataset through the following methods.   
   metadata: <https://huggingface.co/datasets/CuiQiang/CataTQA_Metadata>    
   dataset: <https://huggingface.co/datasets/CuiQiang/CataTQA>
+
+## Data source
+We have retrieved data from multiple open-source databases. The following lists the top 9 categories of data with large volumes. For the complete data sources, please refer to the tabular metadata in our GitHub repository.
+
+- Catalyst Acquisition by Data Science(CADS): An innovative web-based integrated catalyst informatics platform, Catalyst Acquisition by Data Science (CADS), is developed for use towards the discovery and design of catalysts.
+- Catalytic Material Database(CMD): CMD contains material composition, properties, reactions, products and other information.
+- Catalyst Hub: A featured database for surface reactions contains more than 100,000 chemisorption and reaction energies obtained from electronic structure calculations, and is continuously being updated with new datasets.
+- Crystallography Open Database(COD): An open-access collection of crystal structures of organic, inorganic, metal-organic compounds and minerals.
+- Materials Project: The Materials Project provides computed information on known and predicted materials as well as powerful analysis tools to inspire and design novel materials.
+- 2DMatPedia dataset: DMatPedia dataset is a collection of 2D materials, contains 6351 materials.
+- Alexandria_DB PBE 3D: A dataset of 2.5m+ stable and metastable materials calculated with the PBE functional.
+- OQMD-3D dataset: The OQMD is a database of DFT calculated thermodynamic and structural properties of 1,226,781 materials, created in Chris Wolverton's group at Northwestern University.
   
 ## Config
 To run our project, we need to configure our own API_KEY.
