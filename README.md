@@ -6,24 +6,24 @@ Despite their success in general question answering, large language models (LLMs
 
 ![](https://github.com/kg4sci/CataTQA/blob/main/images/main.png)
 
-## setup
+## Setup
 To run our project, you need to first clone the project and use the following command to install dependencies.
 ```python
   pip install -r requirements.txt
 ```
-## download dataset
+## Download dataset
 You can download our metadata and QA dataset through the following methods.   
   metadata: <https://huggingface.co/datasets/CuiQiang/CataTQA_Metadata>    
   dataset: <https://huggingface.co/datasets/CuiQiang/CataTQA>
   
-## config
+## Config
 To run our project, we need to configure our own API_KEY.
 Open **utils/config.py** through a text editor.Modify the following code.
 ```python
 API_KEY = 'YOUR_API_KEY'
 MODEL = 'YOUR_MODEL_NAME'
 ```
-### an example
+### An example
 **Just provide a question and run the tool/run. py program to automatically retrieve answers from all tables.**
 ```
 python tool/run.py
@@ -119,6 +119,6 @@ get_answer: 64
     Do not return redundant content.The returned results must be saved in the "answer" variable.
 ```
 
-## evaluation
+## Evaluation
 ![](https://github.com/kg4sci/CataTQA/blob/main/images/evaluation.png)
 ![](https://github.com/kg4sci/CataTQA/blob/main/images/benchmark.png)
