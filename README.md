@@ -1,5 +1,5 @@
 # CataTQA
-**CataTQA: A Benchmark for Tool-Augmented LLM Question Answering over Heterogeneous Catalysis Tables**
+**CataTQA: A Benchmark for Tool-Augmented LLM Question Answering over Heterogeneous Catalysis Tables.**
 
 ## Abstact 
 Despite their success in general question answering, large language models (LLMs) struggle with hallucinations and inaccurate reasoning in scientific domains. A major challenge stems from experimental data, which are often stored in external sources like supplementary materials and domain-specific databases. These tables are large, heterogeneous, and semantically complex, making them difficult for LLMs to interpret. While external tools show promise, current benchmarks fail to assess LLMs' ability to navigate this data—particularly in locating relevant tables, retrieving key columns, interpreting experimental conditions, and invoking tools.To address this gap, we introduce CataTQA, a new benchmark for catalytic materials. CataTQA features an automated dataset framework and four auxiliary tools. We evaluate tool-enhanced LLMs across five dimensions: table location, column retrieval, condition analysis, tool calling, and question answering, identifying their strengths and weaknesses.Our work sets a new benchmark for evaluating LLMs in scientific fields and paves the way for future advancements.
@@ -149,6 +149,11 @@ To verify whether LLMs can answer relevant questions based on their own memoriza
 |                     | complex | 0     |         |
 | Numerical Calculation | simple  | 0.034 | 0.056   |
 |                     | complex | 0.094 |         |
+
+## Alluvial plot of the Table Positioning Ability of Large Language Models
+
+<img width="900" height="800" alt="image" src="https://github.com/user-attachments/assets/0984d991-e469-4bb2-9e84-9213a619ecc3" />
+
 
 ## Evaluation
 We experimented with four proprietary LLMs on CataTQA, GPT-4o (gpt-4o-2024-11-20), DeepSeek V3 (deepseek-v3-250324), Claude-3 (claude-3-haiku-20240307) and Gemini-2.5 (gemini-2.5-flash-preview-04-17). For all experiments, we used the same hyperparameters and perform 0-shot prompting via the APIs.
