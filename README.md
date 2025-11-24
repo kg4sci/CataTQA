@@ -13,8 +13,8 @@ To run our project, you need to first clone the project and use the following co
 ```
 ## Download dataset
 You can download our metadata and QA dataset through the following methods.   
-  metadata: <https://huggingface.co/datasets/CuiQiang/CataTQA_Metadata>    
-  dataset: <https://huggingface.co/datasets/CuiQiang/CataTQA>
+  metadata: <https://huggingface.co/datasets/felix-hugweb/CataTQA_Metadata>
+  dataset: <https://huggingface.co/datasets/felix-hugweb/CataTQA>
 
 ## Data source
 We have retrieved data from multiple open-source databases. The following lists the top 9 categories of data with large volumes. For the complete data sources, please refer to the tabular metadata in our GitHub repository.
